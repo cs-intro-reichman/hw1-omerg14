@@ -3,23 +3,26 @@ public class TimeFormat {
 		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
 	
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
-   
-		if (hours > 12) {
-			hours = hours - 12;
-		}
 
-		String minutes1 = "";
-		if (minutes < 10) {
-			minutes1 = "0" + minutes;
-		} else {
-			minutes1 = "" + minutes;
-		}
-
+		
 		String period = "PM";
 		if (hours >= 12) {
 			period = "AM";
 		}
 
-		System.out.println(hours + ":" + minutes + " " + period);
+		if (hours > 12) {
+			hours = hours - 12;
+		} else if (hours == 0) {
+			hours = 12;
+		}
+
+		String minutesStr;
+		if (minutes < 10) {
+    		minutesStr = "0" + minutes;
+		} else {
+    		minutesStr = "" + minutes;
+		}
+
+		System.out.println(hours + ":" + minutesStr + " " + period);
 	}
 }
