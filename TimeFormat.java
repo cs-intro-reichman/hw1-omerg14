@@ -23,6 +23,6 @@ public class TimeFormat {
     		minutesStr = "" + minutes;
 		}
 
-		System.out.println(hours + ":" + minutesStr + " " + period);
+		System.out.println(hours + ":" + minutesStr + period);
 	}
 }
