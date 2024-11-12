@@ -15,9 +15,9 @@ public class TimeFormat {
 			minutes1 = "" + minutes;
 		}
 
-		String period = "AM";
+		String period = "PM";
 		if (hours >= 12) {
-			period = "PM";
+			period = "AM";
 		}
 
 		System.out.println(hours + ":" + minutes + " " + period);
